@@ -10,3 +10,6 @@ class ListCryptocurrencyView(generics.ListAPIView):
     """
     queryset = Cryptocurrency.objects.all()
     serializer_class = CryptocurrencySerializer
+    
+def home(request):
+    return render(request, 'home.html')

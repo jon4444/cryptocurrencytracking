@@ -1,1 +1,38 @@
-the template
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-4">Welcome to CryptoTracker Home Page</h1>
+    <p class="text-center lead">Get real-time data and analysis on top cryptocurrencies.</p>
+
+    <!-- Example section with a table of cryptocurrency data -->
+    <table class="table table-hover mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Cryptocurrency</th>
+                <th scope="col">Price (USD)</th>
+                <th scope="col">Market Cap</th>
+                <th scope="col">24h Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Bitcoin (BTC)</td>
+                <td>$30,000</td>
+                <td>$560 Billion</td>
+                <td class="text-success">+2.5%</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Ethereum (ETH)</td>
+                <td>$2,000</td>
+                <td>$240 Billion</td>
+                <td class="text-danger">-1.2%</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</div>
+{% endblock  %}
